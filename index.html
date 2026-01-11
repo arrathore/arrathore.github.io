@@ -2,28 +2,49 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>apoorav's website</title>
-    <link rel="stylesheet" href="style/styles.css">
+    
+    <title>apoorav's webpage</title>
+
+    <link rel="stylesheet" type="text/css" href="styles/index.css">
+
+    <script src="scripts/globals.js"></script>
+    <script src="scripts/index/index_globals.js"></script>
+    <script src="scripts/index/index.js"></script>
+    <script defer src="scripts/index/stars.js"></script>
   </head>
 
-  <body>
+  <body class="mode-affected">
+
+    <canvas id="stars"></canvas>
+
+    <div class="top-right">
+<!--      <button id="display-toggle">toggle display-modes</button> -->
+      <button id="star-toggle">toggle stars</button>
+    </div>
+
+
     
-    <h1>apoorav rathore</h1>
+    <div id="menu">
+
+      <h1 id="title" class="colorful">apoorav rathore</h1>
     
-<pre>
-  bio
-  │ Apoorav Rathore is a 4th year Electrical & Computer Engineering
-  │ student at the University of Texas at Austin. He is currently working
-  │ on hardware and software for experimental medical devices as an
-  │ Undergraduate Research Assistant, and on personal projects with
-  │ embedded systems and full-stack software.    
-  ├── <a href="resume.html">online resume</a>
-  ├── <a href="projects.html">project log</a>
-  └── <a href="links.html">links</a>
-  
-</pre>
+      <p id="summary" class="colorful">
+	This is the personal site of Apoorav Rathore! I am a 4th
+	year Electrical & Computer Engineering student at the
+	University of Texas at Austin, currently working on hardware
+	and software for experimental medical devices as an
+	Undergraduate Research Assistant. I also work on personal projects
+	with embedded systems, and full-stack software.
+      </p>
+      
+      <ul id="links">
+	<li><a id="link1" class="colorful" href="resume.html">online resume</a></li>
+	<li><a id="link2" class="colorful" href="projects.html">project log</a></li
+	<li><a id="link4" class="colorful" href="links.html">links</a></li>
+      </ul>
+    </div>
+
+    <i><h3 id="tagline" class="colorful bottom">you're not supposed to be seeing this you know</h3></i>
     
   </body>
 </html>
-
