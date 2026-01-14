@@ -1,0 +1,54 @@
+.colorful {
+    color: #00A878
+}
+
+#title {
+    text-shadow: #00A878 0px 0px 8px;
+}
+
+a, a:visited, a:active {
+    color: #00A878;
+}
+
+#top-caption {
+    max-width: 500px;
+}
+
+.proj-entry {
+    display: flex;
+    align-items: stretch;
+}
+
+.proj-text {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+.proj-summary {
+    padding-top: 20px;
+}
+
+.tags {
+    margin-top: auto;
+    color: #DBC2CF
+}
+
+#log-text {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.date {
+    margin-bottom: 0;
+    color: #DBC2CF
+}
+
+.update-text {
+    margin-top: 0;
+}
+
+img {
+    max-width: 500px;
+}
+
