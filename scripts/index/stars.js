@@ -8,6 +8,10 @@ const numStars = 300;
 // queue to spawn star trails
 let fade = [];
 
+// colors
+const starColor = 'rgb(229, 220, 222)';
+const trailColor = 'rgb(21, 90, 224)';
+
 // randomly generates stars
 function initStars() {
     stars = [];
@@ -23,7 +27,7 @@ function initStars() {
 	    speed: trail ? 1.0 + Math.random() * .05 : 0.2 + Math.random() * 0.5,
 	    opacity: 0,
 	    fadeSpeed: 0.001 + Math.random() * .001,
-	    color: 'rgb(229, 220, 222)',
+	    color: starColor,
 	    hasTrail: trail
 	};
 
@@ -69,7 +73,7 @@ function drawStars(delta) {
 		    speed: 0,
 		    opacity: star.opacity * .9,
 		    fadeSpeed: star.fadeSpeed * Math.random() * 10,
-		    color: 'rgb(21, 90, 224)'
+		    color: trailColor
 		});
 		// console.log("added a fade");
 	    }
