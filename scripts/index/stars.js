@@ -10,8 +10,8 @@ let fade = [];
 
 // colors
 const starColor = 'rgb(229, 220, 222)';
-const trailColor = 'rgb(21, 90, 224)';
-const canvasDark = '#010118';
+const trailColor = 'rgb(125, 131, 255)';//'rgb(21, 90, 224)';
+const canvasDark = '#1f1e25';
 const canvasLight = 'white';
 
 // randomly generates stars
@@ -38,8 +38,24 @@ function initStars() {
 }
 
 function resizeCanvas() {
+
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+
+/*
+    const dpr = window.devicePixelRatio || 1;
+
+    // css styling
+    canvas.style.width = `${window.innerWidth}px`;
+    canvas.style.height = `${window.innerHeight}px`;
+
+    // drawing buffer
+    canvas.width = Math.floor(window.innerWidth * dpr);
+    canvas.height = Math.floor(window.innerHeight * dpr);
+
+    // normalize coords to css pixels
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  */  
     initStars();
 }
 
@@ -48,8 +64,9 @@ function rgbToRgba(rgb, alpha) {
 }
 
 function drawStars(delta) {
-    ctx.fillStyle = site_globals.light_mode ? canvasLight : canvasDark;
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = /*site_globals.light_mode ? canvasLight : */canvasDark;
+    //ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
     
     // if the user wants moving stars
     if (index_globals.stars_active) {
@@ -61,8 +78,8 @@ function drawStars(delta) {
 	    if (star.opacity < 1) {
 		star.opacity = Math.min(star.opacity + star.fadeSpeed, 1);
 	    }
-	    ctx.fillStyle = !site_globals.light_mode ? /*`rgba(255, 255, 255, ${star.opacity})`*/ rgbToRgba(star.color, star.opacity) :
-		`rgba(100, 100, 255, ${star.opacity})`;
+	    ctx.fillStyle = /*!site_globals.light_mode ? */ rgbToRgba(star.color, star.opacity);/* :
+		`rgba(100, 100, 255, ${star.opacity})`;*/
 	    ctx.fill();
 
 	    
@@ -131,6 +148,11 @@ function animate(time) {
     requestAnimationFrame(animate);
 }
 
-window.addEventListener('resize', resizeCanvas);
+let resizeTimeout;
+window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(resizeCanvas, 100);
+});
 resizeCanvas();
 requestAnimationFrame(animate);
+

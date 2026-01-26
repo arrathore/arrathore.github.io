@@ -10,6 +10,8 @@
 
 body {
     overflow: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 .light-mode {
@@ -29,7 +31,7 @@ canvas {
 }
 
 .colorful {
-    color: #f94735
+    color:/* #f94735*/ #7d83ff;
 }
 
 #tagline {
@@ -85,6 +87,11 @@ a:hover {
 }
 
 #title {
-    text-shadow: #f94735 0px 0px 8px;
+    color: #7d83ff;
+    text-shadow:/* #f94735*/ #7d83ff 0px 0px 24px;
+}
+
+#summary {
+    color:  #7d83ff;
 }
 

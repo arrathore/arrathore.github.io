@@ -15,15 +15,15 @@ body {
 }
 
 .colorful {
-    color: #f94735
+    color: #7d83ff;
 }
 
 a, a:visited, a:active {
-    color: #f94735;
+    color: #7d83ff;
 }
 
 a:hover {
-    color: inherit;
+    color:  #aaaefa;
 }
 
 .top-nav {
