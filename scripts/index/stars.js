@@ -11,6 +11,8 @@ let fade = [];
 // colors
 const starColor = 'rgb(229, 220, 222)';
 const trailColor = 'rgb(21, 90, 224)';
+const canvasDark = '#010118';
+const canvasLight = 'white';
 
 // randomly generates stars
 function initStars() {
@@ -46,7 +48,7 @@ function rgbToRgba(rgb, alpha) {
 }
 
 function drawStars(delta) {
-    ctx.fillStyle = site_globals.light_mode ? 'white' : '#010118';
+    ctx.fillStyle = site_globals.light_mode ? canvasLight : canvasDark;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     
     // if the user wants moving stars
