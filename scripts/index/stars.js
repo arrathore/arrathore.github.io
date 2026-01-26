@@ -99,9 +99,9 @@ function drawStars(delta) {
 
 	    
 	    // move star
-	    if (!star.hasTrail)
+/*	    if (!star.hasTrail)
 		star.y += star.speed * delta * .04;
-	    else
+	    else*/
 		star.y += star.speed * delta * .01;
 	    star.x += star.speed * delta * .04;
 
