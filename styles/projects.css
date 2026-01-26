@@ -1,15 +1,3 @@
-.colorful {
-    color: #00A878
-}
-
-#title {
-    text-shadow: #00A878 0px 0px 8px;
-}
-
-a, a:visited, a:active {
-    color: #00A878;
-}
-
 #top-caption {
     max-width: 500px;
 }
