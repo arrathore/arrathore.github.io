@@ -1,0 +1,70 @@
+/* define grid layout and box formatting */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 250px 250px 50px;
+    gap: 30px;
+    padding: 10px;
+
+    height: auto;
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.box {
+    border: 1px solid #7d83ff;
+    padding: 10px;
+    padding-top: 0;
+
+    overflow: auto;
+    min-height: 0;
+}
+
+.box-title {
+    position: sticky;
+    top: 0;
+    background: black;
+    z-index: 1;
+    padding-bottom: 5px;
+    
+    font-size: 10px;
+    font-family: monospace;
+}
+
+/* box positioning and styling */
+#banner {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#title-text {
+    opacity: 90%;
+    font-size: 64px;
+    margin: 0px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+#bio {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+#navigation {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 3;
+    grid-row-start: 3;
+}
+
+#view {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 5;
+}
+

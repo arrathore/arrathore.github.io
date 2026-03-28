@@ -2,50 +2,85 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <meta name="description" content="portfolio website for Apoorav Rathore">
     
-    <title>apoorav's webpage</title>
+    <title>apoorav's personal website</title>
 
     <link rel="stylesheet" type="text/css" href="styles/style.css">
-    <link rel="stylesheet" type="text/css" href="styles/index.css">
-
+    <link rel="stylesheet" type="text/css" href="styles/layout.css">
+    <link rel="stylesheet" type="text/css" href="styles/stars.css">
+    <link rel="stylesheet" type="text/css" href="styles/listree.css">
+    
     <script src="scripts/globals.js"></script>
-    <script src="scripts/index/index_globals.js"></script>
-    <script src="scripts/index/index.js"></script>
-    <script defer src="scripts/index/stars.js"></script>
+    <script src="scripts/index_globals.js"></script>
+
+    <script defer src="scripts/index.js"></script>
+    <script defer src="scripts/stars.js"></script>
+
   </head>
 
-  <body class="mode-affected">
+  <body>
 
-    <canvas id="stars"></canvas>
-
-    <div class="top-right">
-<!--      <button id="display-toggle">toggle display-modes</button> -->
-      <button id="star-toggle">toggle stars</button>
-    </div>
-
-
-    
-    <div id="menu">
-
-      <i><h1 id="title" class="colorful">apoorav rathore</h1></i>
-    
-      <p id="summary" class="colorful">
-	This is the personal site of Apoorav Rathore! I am a 4th
-	year Electrical & Computer Engineering student at the
-	University of Texas at Austin, currently working on hardware
-	and software for experimental medical devices as an
-	Undergraduate Research Assistant. I also work on personal projects
-	with embedded systems, and full-stack software.
-      </p>
+    <div id="main-container" class="container">
+      <div id="banner" class="box">
+	<p class="box-title">banner</p>
+	<hr />
+	<div id="star-container">
+	  <canvas id="stars"></canvas>
+	  <p id="title-text"><i>apoorav rathore's personal website</i></p>
+	</div>
+      </div>
       
-      <ul id="links">
-	<li><a id="link1" class="colorful" href="resume.html">online resume</a></li>
-	<li><a id="link2" class="colorful" href="projects.html">project log</a></li
-	<li><a id="link4" class="colorful" href="links.html">links</a></li>
-      </ul>
+      <div id="bio" class="box">
+	<p class="box-title">biographical</p>
+	<hr />	
+	<p>
+	  This is the personal site of Apoorav Rathore! I am a 4th
+	  year Electrical &amp; Computer Engineering student at the
+	  University of Texas at Austin, currently working on hardware
+	  and software for experimental medical devices as an
+	  Undergraduate Research Assistant. I also work on personal
+	  projects with embedded systems, and full-stack software.
+	</p>
+	  
+      </div>
+
+      <div id="navigation" class="box">
+	<p class="box-title">navigation</p>
+	<hr />
+	<ul id="links" class="tree">
+	  <li>
+	    projects
+	    <ul>
+	      <li>
+		<a href="#"
+		   data-page="projects/env-sensor/env-sensor.html">
+		  Iot Environmental Sensor and Data Pipeline
+		</a>
+		<div class="tags">
+		<i>
+		  C/C++, Python, Node.js, Arduino, REST API, MQTT, Cloud,
+		  Full-Stack, Web Development
+		</i>
+	      </div>
+	      </li>
+	      <li><a href="https://github.com/arrathore">More on my GitHub</a></li>
+	    </ul>
+	  </li>
+	</ul>
+      </div>
+      
+      <div id="view" class="box">
+	<p class="box-title">view</p>
+	<hr />
+
+	<p>
+	  Select an option in navigation.
+	</p>
+      </div>
+      
+      
     </div>
 
-    <i><h3 id="tagline" class="colorful bottom">you're not supposed to be seeing this you know</h3></i>
-    
   </body>
 </html>
