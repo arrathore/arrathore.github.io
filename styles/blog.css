@@ -1,2 +1,26 @@
+/* styling for expanded blog pages */
+html, body {
+    color:  white;
+    background-color: black;
+    height: 95%;
+    margin: 1%;
+    font-family: system-ui;
+}
 
+#log-text {
+    max-width: 75%;
+}
+
+a, a:visited, a:active {
+    color: #7d83ff;
+}
+
+a:hover {
+    color: inherit;
+}
+
+img {
+    max-height: 100%;
+    max-width: 50%;
+}
 
