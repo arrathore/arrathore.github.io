@@ -8,23 +8,25 @@
 
     height: auto;
     width: 90%;
-    max-width: 1000px;
+/*    max-width: 1000px;*/
     margin: 0 auto;
 }
 
 .box {
-    border: 1px solid #7d83ff;
+    border: 1px solid var(--style-color);
     padding: 10px;
     padding-top: 0;
 
     overflow: auto;
     min-height: 0;
+
+    box-shadow: 4px 4px 0px var(--style-color);
 }
 
 .box-title {
     position: sticky;
     top: 0;
-    background: black;
+    background: var(--style-background);
     z-index: 1;
     padding-bottom: 5px;
     
@@ -38,6 +40,13 @@
     grid-column-end: 3;
 }
 
+@font-face {
+    font-family: 'FreePixel';
+    src: url('/font/FreePixel.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 #title-text {
     opacity: 90%;
     font-size: 64px;
@@ -45,6 +54,8 @@
     text-align: center;
     position: relative;
     z-index: 1;
+    font-family: FreePixel;
+    text-shadow: 4px 4px 0px var(--style-color);
 }
 
 #bio {

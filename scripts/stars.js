@@ -4,17 +4,34 @@ const ctx = canvas.getContext('2d');
 
 // queue to spawn stars
 let stars = [];
-const numStars = 50;
+const numStars = 75;
 
 // queue to spawn star trails
 let fade = [];
 
 // animation constants
-const starColor = 'rgb(229, 220, 222)';
+function getThemeColors() {
+    const styles = getComputedStyle(document.documentElement);
+
+    return {
+        starColor: styles.getPropertyValue('--style-foreground').trim(),
+        canvasDark: styles.getPropertyValue('--style-background').trim(),
+    };
+}
+
+let { starColor, canvasDark } = getThemeColors();
+//const starColor = '#211a17';//'rgb(229, 220, 222)';
 const trailColor = 'rgb(125, 131, 255)';//'rgb(21, 90, 224)';
-const canvasDark = 'black';
+//const canvasDark = '#faefe8';//'black';
 const canvasLight = 'white';
 const driftSpeed = 0.6;
+
+// listen for os color changes
+window.matchMedia('(prefers-color-scheme: dark)')
+    .addEventListener('change', () => {
+        ({ starColor, canvasDark } = getThemeColors());
+	resizeCanvas();
+    });
 
 // randomly generates stars
 function initStars() {

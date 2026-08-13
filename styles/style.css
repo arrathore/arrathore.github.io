@@ -1,18 +1,31 @@
 /* general styling */
+:root {
+    --style-color: #a29f95;
+    --style-background: #faefe8;
+    --style-foreground: #211a17;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+	--style-background: #211a17;
+	--style-foreground: #faefe8;
+    }
+}
+
 html, body {
-    color:  white;
-    background-color: black;
+    color:  var(--style-foreground);
+    background-color: var(--style-background);
     height: 95%;
     margin: 0;
     font-family: system-ui;
 }
 
 a, a:visited, a:active {
-    color: #7d83ff;
+    color: var(--style-foreground);
 }
 
 a:hover {
-    color: inherit;
+    color: var(--style-color);
 }
 
 .tags {
