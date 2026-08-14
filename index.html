@@ -1,3 +1,6 @@
+---
+---
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -19,6 +22,7 @@
 
     <script defer src="scripts/index.js"></script>
     <script defer src="scripts/stars.js"></script>
+    <script defer src="scripts/marquee.js"></script>
 
   </head>
 
@@ -33,7 +37,7 @@
 	  <p id="title-text"><i>apoorav rathore's personal website</i></p>
 	</div>
       </div>
-      
+
       <div id="bio" class="box">
 	<p class="box-title">biographical</p>
 	<hr />	
@@ -83,6 +87,16 @@
 	  </li>
 	</ul>
       </div>
+
+      <div id="badges">
+	<div class="marquee-container">
+	  <div class="marquee-track">
+	    <div class="marquee-group">
+	      {% include badges.html %}
+	    </div>
+	  </div>
+	</div>
+      </div>
       
       <div id="view" class="box">
 	<p class="box-title">view</p>
@@ -96,5 +110,17 @@
       
     </div>
 
+    <br />
+
+    <div id="footer">
+      <p>&copy; 2026 Apoorav Rathore.</p>
+      <p>
+	Verbatim copying and redistribution of this entire page are
+	permitted provided this notice is preserved.
+      </p>
+      <img alt="GPLv3"
+	   src="https://img.shields.io/badge/GPLv3-red?style=flat-square&logo=gplv3&logoColor=white&logoSize=auto&color=%23BD0000">
+    </div>
+    
   </body>
 </html>

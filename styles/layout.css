@@ -79,3 +79,20 @@
     grid-row-end: 5;
 }
 
+#footer {
+    text-align: center;
+}
+
+#badges {
+    grid-column: 1;
+    grid-row: 4;
+
+    min-width: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+#badges img {
+    box-shadow: 4px 4px 0px var(--style-color);
+}
+

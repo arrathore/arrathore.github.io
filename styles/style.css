@@ -39,3 +39,41 @@ a:hover {
     object-fit: contain;
 }
 
+#footer {
+    font-size: 12px;
+}
+
+.marquee-container {
+    overflow: hidden;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.marquee-track {
+    display: flex;
+    width: max-content;
+    gap: 10px;
+    will-change: transform;
+    animation: scrollMarquee 40s linear infinite;
+}
+
+.marquee-group {
+    display: flex;
+    flex-shrink: 0;
+    gap: 10px;
+ }
+
+.marquee-group img {
+    display: block;
+    flex-shrink: 0;
+}
+
+@keyframes scrollMarquee {
+    0% {
+        transform: translate3d(-33.333%, 0, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
